@@ -59,18 +59,18 @@ function criar_utilizador_teslamate() {
 function criar_docker_compose() {
   local teslamate_home="/home/teslamate"
 
-  # Create the docker-compose folder
+  # Criar pasta do docker-compose
   if [[ ! -d "$teslamate_home/docker-compose" ]]; then
     sudo mkdir -p "$teslamate_home/docker-compose"
   fi
 
-  # Create the docker-compose.yml file
+  # Criar ficheiro docker-compose.yml
   sudo  cp ./docker-compose.yml "$teslamate_home/docker-compose/"
 
-  # Make sure the file is owned by the "teslamate" user
+  # Fix das permissões
   sudo chown -R teslamate "$teslamate_home/docker-compose/"
 
-  echo "docker-compose folder and file created successfully!"
+  echo "Pasta e ficheiro do docker-compose criados com sucesso!!!"
 }
 # Função para iniciar o tesla mate
 function iniciar_tesla_mate() {
