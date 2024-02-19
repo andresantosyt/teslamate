@@ -1,4 +1,5 @@
 #!/bin/bash
+export DEBIAN_FRONTEND=noninteractive
 
 # Função para verificar se o sistema é Ubuntu 22
 function verificar_ubuntu_22() {
